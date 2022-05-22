@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameEngine : MonoBehaviour
 {
@@ -12,6 +13,7 @@ public class GameEngine : MonoBehaviour
 
     [SerializeField] TMPro.TextMeshProUGUI pointsLabel;
     [SerializeField] TMPro.TextMeshProUGUI gameOverLabel;
+    [SerializeField] Button restartButton;
 
     private static GameEngine Instance;
 
@@ -108,5 +110,6 @@ public class GameEngine : MonoBehaviour
         else if (IsLose)
             Instance.gameOverLabel.text += "You lose.";
         Instance.gameOverLabel.gameObject.SetActive(true);
+        Instance.restartButton.gameObject.SetActive(true);
     }
 }
