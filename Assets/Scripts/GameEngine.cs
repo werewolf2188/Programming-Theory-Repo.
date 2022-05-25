@@ -112,4 +112,11 @@ public class GameEngine : MonoBehaviour
         Instance.gameOverLabel.gameObject.SetActive(true);
         Instance.restartButton.gameObject.SetActive(true);
     }
+
+    public static void Restart()
+    {
+        isLose = false;
+        numberOfEnemies = 1;
+        numberOfEnemiesInScreen = 0;
+    }
 }

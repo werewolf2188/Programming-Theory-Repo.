@@ -19,6 +19,10 @@ public class Intro : MonoBehaviour
 
     public void OnStartClick()
     {
+        if (SceneManager.GetActiveScene().buildIndex == 1)
+        {
+            GameEngine.Restart();
+        }
         SceneManager.LoadScene(1);
     }
 }
